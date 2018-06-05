@@ -7,6 +7,9 @@ before_install:
   - ./tool/before_install.sh
 script: ./tool/travis.sh
 
+branch: 
+  only:
+    - gh-pages
 
 after_success:
 - echo "SUCCESS"
