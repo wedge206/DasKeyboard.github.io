@@ -7,6 +7,9 @@ before_install:
   - ./tool/before_install.sh
 script: ./tool/travis.sh
 
+branches:
+  only:
+    - gh-pages
 
 deploy:
   provider: pages
