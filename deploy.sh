@@ -3,8 +3,9 @@
 set -o errexit -o nounset
 
 echo "SUCCESS"
+git clone --depth=50 --branch=master https://github.com/DasKeyboard/DasKeyboard.github.io.git DasKeyboard/DasKeyboard.github.io
 git fetch
-git checkout master
+# git checkout master
 git branch
 
 # if [ "$TRAVIS_BRANCH" != "master" ]
