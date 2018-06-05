@@ -13,6 +13,7 @@ branches:
 
 after_success:
 - echo "SUCCESS"
+- git fetch
 - git checkout master
 # - echo "${SFTP_KEY}" | base64 --decode >/tmp/sftp_rsa
 # - curl --ftp-create-dirs
