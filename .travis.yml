@@ -7,19 +7,16 @@ before_install:
   - ./tool/before_install.sh
 script: ./tool/travis.sh
 
-branch: 
+
+branches:
   only:
-    - gh-pages
+   - gh-pages
 
 after_success:
 - echo "SUCCESS"
 - git fetch
 - git checkout master
-# - echo "${SFTP_KEY}" | base64 --decode >/tmp/sftp_rsa
-# - curl --ftp-create-dirs
-#        -T filename
-#        --key /tmp/sftp_rsa
-#        sftp://${SFTP_USER}:${SFTP_PASSWORD}@example.com/directory/filename
+- git branch
 
 # deploy:
 #   provider: pages
@@ -28,7 +25,7 @@ after_success:
 #   keep-history: true
 #   on:
 #     branch: master
-    # branch: gh-pages
+#     # branch: gh-pages
 
 # deploy:
 #   provider: script
