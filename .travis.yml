@@ -13,10 +13,13 @@ branches:
    - gh-pages
 
 after_success:
-- echo "SUCCESS"
-- git fetch
-- git checkout master
-- git branch
+  - bash deploy.sh
+
+# after_success:
+# - echo "SUCCESS"
+# - git fetch
+# - git checkout master
+# - git branch
 
 # deploy:
 #   provider: pages
