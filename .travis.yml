@@ -12,8 +12,8 @@ branches:
   only:
    - gh-pages
 
-after_success:
-  - bash deploy.sh
+# after_success:
+#   - bash deploy.sh
 
 # after_success:
 # - echo "SUCCESS"
@@ -21,14 +21,14 @@ after_success:
 # - git checkout master
 # - git branch
 
-# deploy:
-#   provider: pages
-#   skip-cleanup: true
-#   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-#   keep-history: true
-#   on:
-#     branch: master
-#     # branch: gh-pages
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
+    # branch: gh-pages
 
 # deploy:
 #   provider: script
