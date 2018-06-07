@@ -8,19 +8,6 @@ before_install:
 script: ./tool/travis.sh
 
 
-branches:
-  only:
-   - gh-pages
-
-# after_success:
-#   - bash deploy.sh
-
-# after_success:
-# - echo "SUCCESS"
-# - git fetch
-# - git checkout master
-# - git branch
-
 deploy:
   provider: pages
   skip-cleanup: true
@@ -29,9 +16,3 @@ deploy:
   on:
     branch: master
     # branch: gh-pages
-
-# deploy:
-#   provider: script
-#   script: bash deploy.sh
-#   on:
-#     branch: gh-pages
